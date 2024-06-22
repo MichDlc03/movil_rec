@@ -1,4 +1,5 @@
 import 'package:app/pages/login_page.dart';
+import 'package:app/pages/prospectos_page.dart';
 import 'package:app/pages/splash.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
@@ -10,7 +11,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,8 +18,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: 'Splash',
-      routes: {'Splash': (_) => Splash()},
+      initialRoute: 'ListaDeProspectos',
+      routes: {
+        'Splash': (_) => Splash(),
+        'ListaDeProspectos': (_) => const ProspectosPage()
+      },
     );
   }
 }
