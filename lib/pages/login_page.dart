@@ -1,10 +1,7 @@
-// ignore_for_file: unused_element
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:app/widgets/textFileFormGeneral.dart';
 import 'crear_cuenta.dart';
-import 'splash.dart';
 
 class LoginPage extends StatefulWidget {
   static String id = "login_page";
@@ -121,7 +118,9 @@ class _LoginPageState extends State<LoginPage> {
   Widget _buttonSingUp() {
     return MaterialButton(
         color: const Color.fromARGB(255, 46, 46, 46),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushReplacementNamed(context, 'ListaDeProspectos');
+        },
         elevation: 3.0,
         focusElevation: 20,
         focusColor: const Color(0xff3B3535),

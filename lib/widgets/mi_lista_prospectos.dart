@@ -1,5 +1,6 @@
 import 'package:app/pages/perfil_prospectos_page.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Prospecto {
   final String nombre;
@@ -83,61 +84,92 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
     ),
   ];
 
-  @override
+ @override
   Widget build(BuildContext context) {
     String title = "Mis Prospectos";
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.menu),
+        leading: const Icon(Icons.menu, color: Colors.white),
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.search, color: Colors.white)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert, color: Colors.white)),
         ],
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 199, 196, 199),
-        title: Text(title),
+        backgroundColor: const Color(0xff0A0A0A),
+        title: Text(
+          title,
+          style: GoogleFonts.dosis(
+            textStyle: Theme.of(context).textTheme.headlineMedium,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
       ),
-      body: ListView.builder(
-        itemCount: prospectos.length,
-        itemBuilder: (context, index) {
-          final prospecto = prospectos[index];
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              decoration: BoxDecoration(
-                color: const Color(0xffc9d6df),
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 2,
-                    blurRadius: 5,
-                    offset: const Offset(0, 3),
-                  ),
-                ],
-              ),
-              child: ListTile(
-                leading: const Icon(Icons.person, color: Colors.deepPurple),
-                title: Text(
-                  prospecto.nombre,
-                  style: const TextStyle(color: Colors.black, fontSize: 18),
-                ),
-                trailing: const Icon(Icons.arrow_circle_right_outlined,
-                    color: Colors.deepPurple),
-                subtitle: Text(prospecto.descripcion),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) =>
-                          MiPerfilProspectoPage(prospecto: prospecto),
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Color.fromARGB(255, 126, 126, 126),
+              Color(0xff0A0A0A),
+              Color.fromARGB(255, 0, 0, 0),
+              Color.fromARGB(255, 126, 126, 126),
+            ],
+          ),
+        ),
+        child: ListView.builder(
+          itemCount: prospectos.length,
+          itemBuilder: (context, index) {
+            final prospecto = prospectos[index];
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: const Color(0xff3B3535),
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.5),
+                      spreadRadius: 2,
+                      blurRadius: 5,
+                      offset: const Offset(0, 3),
                     ),
-                  );
-                },
+                  ],
+                ),
+                child: ListTile(
+                  leading: const Icon(Icons.person, color: Colors.amberAccent, size: 40),
+                  title: Text(
+                    prospecto.nombre,
+                    style: GoogleFonts.dosis(
+                      textStyle: Theme.of(context).textTheme.bodyMedium,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  trailing: const Icon(Icons.arrow_circle_right_outlined, color: Colors.amberAccent, size: 30),
+                  subtitle: Text(
+                    prospecto.descripcion,
+                    style: GoogleFonts.dosis(
+                      textStyle: Theme.of(context).textTheme.bodyMedium,
+                      fontSize: 14,
+                      color: Colors.white70,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MiPerfilProspectoPage(prospecto: prospecto),
+                      ),
+                    );
+                  },
+                ),
               ),
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }
