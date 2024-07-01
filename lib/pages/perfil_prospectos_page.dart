@@ -19,9 +19,7 @@ class MiPerfilProspectoPage extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        iconTheme: const IconThemeData(
-            color:
-                Colors.white),
+        iconTheme: const IconThemeData(color: Colors.white),
         backgroundColor: const Color(0xff0A0A0A),
       ),
       body: Container(
@@ -50,7 +48,7 @@ class MiPerfilProspectoPage extends StatelessWidget {
                     child: Icon(
                       Icons.person,
                       size: 40,
-                      color: Colors.amberAccent,
+                      color: Color(0xffe1e4e6),
                     ),
                   ),
                   const SizedBox(width: 16),
@@ -105,7 +103,7 @@ class MiPerfilProspectoPage extends StatelessWidget {
                       child: ListTile(
                         leading: const Icon(
                           Icons.home,
-                          color: Colors.amberAccent,
+                          color: Color(0xffe1e4e6),
                           size: 40,
                         ),
                         title: Text(

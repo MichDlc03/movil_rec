@@ -35,7 +35,7 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
   final List<Prospecto> prospectos = [
     Prospecto(
       "Michelle Jimenez",
-      "Prospecto 1",
+      "Asesor inmobiliario",
       [
         Inmueble(
             id: 1,
@@ -51,7 +51,7 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
     ),
     Prospecto(
       "Juan Perez",
-      "Prospecto 2",
+      "Asesor inmobiliario",
       [
         Inmueble(
             id: 3,
@@ -62,7 +62,7 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
     ),
     Prospecto(
       "Ana Lopez",
-      "Prospecto 3",
+      "Provisional",
       [
         Inmueble(
             id: 4,
@@ -73,7 +73,7 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
     ),
     Prospecto(
       "Carlos Martinez",
-      "Prospecto 4",
+      "Gerente de ventas",
       [
         Inmueble(
             id: 5,
@@ -84,15 +84,19 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
     ),
   ];
 
- @override
+  @override
   Widget build(BuildContext context) {
-    String title = "Mis Prospectos";
+    String title = "Asesores";
     return Scaffold(
       appBar: AppBar(
         leading: const Icon(Icons.menu, color: Colors.white),
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.search, color: Colors.white)),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert, color: Colors.white)),
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.search, color: Colors.white)),
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.more_vert, color: Colors.white)),
         ],
         centerTitle: true,
         backgroundColor: const Color(0xff0A0A0A),
@@ -138,7 +142,8 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
                   ],
                 ),
                 child: ListTile(
-                  leading: const Icon(Icons.person, color: Colors.amberAccent, size: 40),
+                  leading: const Icon(Icons.person,
+                      color: Color(0xffF0F5F9), size: 40),
                   title: Text(
                     prospecto.nombre,
                     style: GoogleFonts.dosis(
@@ -148,20 +153,23 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
                       color: Colors.white,
                     ),
                   ),
-                  trailing: const Icon(Icons.arrow_circle_right_outlined, color: Colors.amberAccent, size: 30),
+                  trailing: const Icon(Icons.arrow_circle_right_outlined,
+                      color: Color(0xffF0F5F9), size: 30),
                   subtitle: Text(
                     prospecto.descripcion,
                     style: GoogleFonts.dosis(
                       textStyle: Theme.of(context).textTheme.bodyMedium,
                       fontSize: 14,
-                      color: Colors.white70,
+                      fontWeight: FontWeight.w500,
+                      color: const Color(0xffe1e4e6),
                     ),
                   ),
                   onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => MiPerfilProspectoPage(prospecto: prospecto),
+                        builder: (context) =>
+                            MiPerfilProspectoPage(prospecto: prospecto),
                       ),
                     );
                   },
