@@ -122,7 +122,6 @@ MiPerfilInmueblesPage({required this.inmueble, super.key});
                 ),
               ),
             ),
-            // Agrega más ListTile según sea necesario para otros detalles
           ],
         ),
       ),
