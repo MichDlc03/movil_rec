@@ -1,6 +1,6 @@
-import 'package:app/widgets/mi_lista_prospectos.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../models/prospecto_model.dart';
 
 class MiPerfilProspectoPage extends StatelessWidget {
   final Prospecto prospecto;

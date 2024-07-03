@@ -1,28 +1,10 @@
+import 'package:app/models/inmueble_model.dart';
 import 'package:app/pages/perfil_prospectos_page.dart';
+import 'package:app/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Prospecto {
-  final String nombre;
-  final String descripcion;
-  final List<Inmueble> inmuebles;
-
-  Prospecto(this.nombre, this.descripcion, this.inmuebles);
-}
-
-class Inmueble {
-  final int id;
-  final String nombreInmueble;
-  final String medidasDelTerreno;
-  final int cantidadDeHabitaciones;
-
-  Inmueble({
-    required this.id,
-    required this.nombreInmueble,
-    required this.medidasDelTerreno,
-    required this.cantidadDeHabitaciones,
-  });
-}
+import '../models/prospecto_model.dart';
 
 class MiListaDeProspectos extends StatefulWidget {
   const MiListaDeProspectos({super.key});
@@ -89,14 +71,30 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
     String title = "Asesores";
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.menu, color: Colors.white),
+        leading: Builder(
+          builder: (context) {
+            return IconButton(
+              icon: const Icon(Icons.menu, color: Colors.white),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+            );
+          },
+        ),
         actions: [
           IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.search, color: Colors.white)),
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.more_vert, color: Colors.white)),
+            onPressed: () {},
+            icon: const Icon(Icons.search, color: Colors.white)),
+          Builder(
+            builder: (context) {
+              return IconButton(
+                onPressed: () {
+                  Scaffold.of(context).openEndDrawer();
+                },
+                icon: const Icon(Icons.more_vert, color: Colors.white),
+              );
+            },
+          ),
         ],
         centerTitle: true,
         backgroundColor: const Color(0xff0A0A0A),
@@ -109,6 +107,7 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
           ),
         ),
       ),
+      drawer: const CustomDrawer(),
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(

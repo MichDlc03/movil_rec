@@ -1,3 +1,4 @@
+import 'package:app/pages/inmuebles_page.dart';
 import 'package:app/pages/login_page.dart';
 import 'package:app/pages/prospectos_page.dart';
 import 'package:app/pages/splash.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         'Splash': (_) => const Splash(),
         'Login': (_) =>  LoginPage(),
         'ListaDeProspectos': (_) => const ProspectosPage(),
+        'ListaDeInmuebles' : (_) => const InmueblesPage()
       },
     );
   }
