@@ -17,7 +17,7 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
   final List<Prospecto> prospectos = [
     Prospecto(
       "Michelle Jimenez",
-      "Asesor inmobiliario",
+      "Detalles",
       [
         Inmueble(
             id: 1,
@@ -33,7 +33,7 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
     ),
     Prospecto(
       "Juan Perez",
-      "Asesor inmobiliario",
+      "Detalles",
       [
         Inmueble(
             id: 3,
@@ -44,7 +44,7 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
     ),
     Prospecto(
       "Ana Lopez",
-      "Provisional",
+      "Detalles",
       [
         Inmueble(
             id: 4,
@@ -55,7 +55,7 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
     ),
     Prospecto(
       "Carlos Martinez",
-      "Gerente de ventas",
+      "Detalles",
       [
         Inmueble(
             id: 5,
@@ -83,8 +83,8 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.search, color: Colors.white)),
+              onPressed: () {},
+              icon: const Icon(Icons.search, color: Colors.white)),
           Builder(
             builder: (context) {
               return IconButton(
@@ -152,7 +152,7 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
                       color: Colors.white,
                     ),
                   ),
-                  trailing: const Icon(Icons.arrow_circle_right_outlined,
+                  trailing: const Icon(Icons.call,
                       color: Color(0xffF0F5F9), size: 30),
                   subtitle: Text(
                     prospecto.descripcion,
