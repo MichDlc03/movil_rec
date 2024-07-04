@@ -29,7 +29,7 @@ class MiPerfilInmueblesPage extends StatelessWidget {
         backgroundColor: const Color(0xff0B3C5D),
       ),
       body: Container(
-        color: const Color(0xffEDF2FA), 
+        color: const Color(0xffEDF2FA),
         child: ListView(
           padding: const EdgeInsets.all(16.0),
           children: [
@@ -69,7 +69,7 @@ class MiPerfilInmueblesPage extends StatelessWidget {
                 textStyle: Theme.of(context).textTheme.headlineMedium,
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: Colors.black, 
+                color: const Color(0xff333333),
               ),
             ),
             const SizedBox(height: 16),
@@ -80,7 +80,7 @@ class MiPerfilInmueblesPage extends StatelessWidget {
                 style: GoogleFonts.dosis(
                   textStyle: Theme.of(context).textTheme.bodyMedium,
                   fontSize: 16,
-                  color: Colors.black, 
+                  color: const Color(0xff333333),
                 ),
               ),
               subtitle: Text(
@@ -88,7 +88,7 @@ class MiPerfilInmueblesPage extends StatelessWidget {
                 style: GoogleFonts.dosis(
                   textStyle: Theme.of(context).textTheme.bodyMedium,
                   fontSize: 14,
-                  color: Colors.black, 
+                  color: const Color(0xff333333),
                 ),
               ),
             ),
@@ -99,7 +99,7 @@ class MiPerfilInmueblesPage extends StatelessWidget {
                 style: GoogleFonts.dosis(
                   textStyle: Theme.of(context).textTheme.bodyMedium,
                   fontSize: 16,
-                  color: Colors.black, 
+                  color: const Color(0xff333333),
                 ),
               ),
               subtitle: Text(
@@ -107,7 +107,7 @@ class MiPerfilInmueblesPage extends StatelessWidget {
                 style: GoogleFonts.dosis(
                   textStyle: Theme.of(context).textTheme.bodyMedium,
                   fontSize: 14,
-                  color: Colors.black, 
+                  color: const Color(0xff333333),
                 ),
               ),
             ),
@@ -118,7 +118,7 @@ class MiPerfilInmueblesPage extends StatelessWidget {
                 style: GoogleFonts.dosis(
                   textStyle: Theme.of(context).textTheme.bodyMedium,
                   fontSize: 16,
-                  color: Colors.black, 
+                  color: const Color(0xff333333),
                 ),
               ),
               subtitle: Text(
@@ -126,7 +126,7 @@ class MiPerfilInmueblesPage extends StatelessWidget {
                 style: GoogleFonts.dosis(
                   textStyle: Theme.of(context).textTheme.bodyMedium,
                   fontSize: 14,
-                  color: Colors.black, 
+                  color: const Color(0xff333333),
                 ),
               ),
             ),
@@ -137,7 +137,7 @@ class MiPerfilInmueblesPage extends StatelessWidget {
                 style: GoogleFonts.dosis(
                   textStyle: Theme.of(context).textTheme.bodyMedium,
                   fontSize: 16,
-                  color: Colors.black, 
+                  color: const Color(0xff333333),
                 ),
               ),
               subtitle: Text(
@@ -145,18 +145,19 @@ class MiPerfilInmueblesPage extends StatelessWidget {
                 style: GoogleFonts.dosis(
                   textStyle: Theme.of(context).textTheme.bodyMedium,
                   fontSize: 14,
-                  color: Colors.black, 
+                  color: const Color(0xff333333),
                 ),
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.location_city, color: Color(0xff0B3C5D)),
+              leading:
+                  const Icon(Icons.location_city, color: Color(0xff0B3C5D)),
               title: Text(
                 'Ubicación:',
                 style: GoogleFonts.dosis(
                   textStyle: Theme.of(context).textTheme.bodyMedium,
                   fontSize: 16,
-                  color: Colors.black, 
+                  color: const Color(0xff333333),
                 ),
               ),
               subtitle: Text(
@@ -164,7 +165,7 @@ class MiPerfilInmueblesPage extends StatelessWidget {
                 style: GoogleFonts.dosis(
                   textStyle: Theme.of(context).textTheme.bodyMedium,
                   fontSize: 14,
-                  color: Colors.black, 
+                  color: const Color(0xff333333),
                 ),
               ),
             ),
@@ -175,7 +176,7 @@ class MiPerfilInmueblesPage extends StatelessWidget {
                 style: GoogleFonts.dosis(
                   textStyle: Theme.of(context).textTheme.bodyMedium,
                   fontSize: 16,
-                  color: Colors.black, 
+                  color: const Color(0xff333333),
                 ),
               ),
               subtitle: Text(
@@ -183,7 +184,7 @@ class MiPerfilInmueblesPage extends StatelessWidget {
                 style: GoogleFonts.dosis(
                   textStyle: Theme.of(context).textTheme.bodyMedium,
                   fontSize: 14,
-                  color: Colors.black, 
+                  color: const Color(0xff333333),
                 ),
               ),
             ),

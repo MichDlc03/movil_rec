@@ -115,14 +115,15 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
           itemBuilder: (context, index) {
             final prospecto = prospectos[index];
             return Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding:
+                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
               child: Container(
                 decoration: BoxDecoration(
                   color: const Color(0xffEDF2FA),
                   borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.5),
+                      color: Colors.black.withOpacity(0.2),
                       spreadRadius: 2,
                       blurRadius: 2,
                       offset: const Offset(0, 3),
@@ -131,14 +132,14 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
                 ),
                 child: ListTile(
                   leading: const Icon(Icons.person,
-                      color: Color(0xff000000), size: 40),
+                      color: Color(0xff0B3C5D), size: 40),
                   title: Text(
                     prospecto.nombre,
                     style: GoogleFonts.dosis(
                       textStyle: Theme.of(context).textTheme.bodyMedium,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: const Color(0xff333333),
                     ),
                   ),
                   trailing: const Icon(Icons.call,
@@ -149,7 +150,7 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
                       textStyle: Theme.of(context).textTheme.bodyMedium,
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
-                      color: const Color(0xff000000),
+                      color: const Color(0xff333333),
                     ),
                   ),
                   onTap: () {

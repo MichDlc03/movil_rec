@@ -61,6 +61,7 @@ flutter:
     - assets/imagenes/
     - assets/imagenes/icononegro.png
     - assets/imagenes/iconoblanco.png
+    - assets/imagenes/icon-rec.png
     - assets/imagenes/casa.jpg
     - assets/imagenes/casa2.jpg
     - assets/imagenes/casa3.jpg
@@ -74,7 +75,7 @@ flutter:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/imagenes/icononegro.png"
+  image_path: "assets/imagenes/icon-rec.png"
 
   # To add assets to your application, add an assets section, like this:
   # assets:

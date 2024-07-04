@@ -22,10 +22,11 @@ class _LoginPageState extends State<LoginPage> {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Color.fromARGB(255, 126, 126, 126),
-              Color(0xff0A0A0A),
-              Color.fromARGB(255, 0, 0, 0),
-              Color.fromARGB(255, 126, 126, 126),
+              Color.fromARGB(255, 159, 187, 243),
+              Color(0xff154367),
+              Color(0xff154367),
+              Color(0xff154367),
+              Color.fromARGB(255, 159, 187, 243),
             ],
           ),
         ),
@@ -86,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                 textAlign: TextAlign.center,
                 style: GoogleFonts.dosis(
                     textStyle: Theme.of(context).textTheme.displayLarge,
-                    fontSize: 20,
+                    fontSize: 18,
                     fontWeight: FontWeight.w600,
                     color: Colors.white),
               ),
@@ -117,7 +118,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _buttonSingUp() {
     return MaterialButton(
-        color: const Color.fromARGB(255, 46, 46, 46),
+        color: const Color(0xffEDF2FA),
         onPressed: () {
           Navigator.pushReplacementNamed(context, 'ListaDeProspectos');
         },
@@ -130,7 +131,7 @@ class _LoginPageState extends State<LoginPage> {
             style: GoogleFonts.dosis(
                 textStyle: Theme.of(context).textTheme.displayLarge,
                 fontSize: 20,
-                fontWeight: FontWeight.w800,
-                color: Colors.white)));
+                fontWeight: FontWeight.w700,
+                color: const Color(0xff333333))));
   }
 }

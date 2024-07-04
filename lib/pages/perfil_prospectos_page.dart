@@ -37,7 +37,7 @@ class MiPerfilProspectoPage extends StatelessWidget {
                     child: Icon(
                       Icons.person,
                       size: 40,
-                      color: Color(0xff000000),
+                      color: Color(0xff0B3C5D),
                     ),
                   ),
                   const SizedBox(width: 16),
@@ -50,7 +50,7 @@ class MiPerfilProspectoPage extends StatelessWidget {
                           textStyle: Theme.of(context).textTheme.headlineMedium,
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                          color: const Color(0xff333333),
                         ),
                       ),
                       const SizedBox(height: 8),
@@ -59,7 +59,7 @@ class MiPerfilProspectoPage extends StatelessWidget {
                         style: GoogleFonts.dosis(
                           textStyle: Theme.of(context).textTheme.bodyMedium,
                           fontSize: 16,
-                          color: Colors.black,
+                          color: const Color(0xff333333),
                         ),
                       ),
                     ],
@@ -73,7 +73,7 @@ class MiPerfilProspectoPage extends StatelessWidget {
                   textStyle: Theme.of(context).textTheme.headlineMedium,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  color: const Color(0xff333333),
                 ),
               ),
               const SizedBox(height: 8),
@@ -101,7 +101,7 @@ class MiPerfilProspectoPage extends StatelessWidget {
                             textStyle: Theme.of(context).textTheme.bodyMedium,
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
-                            color: Colors.black,
+                            color: const Color(0xff333333),
                           ),
                         ),
                         subtitle: Text(
@@ -109,7 +109,7 @@ class MiPerfilProspectoPage extends StatelessWidget {
                           style: GoogleFonts.dosis(
                             textStyle: Theme.of(context).textTheme.bodyMedium,
                             fontSize: 14,
-                            color: Colors.black,
+                            color: const Color(0xff333333),
                           ),
                         ),
                       ),

@@ -24,12 +24,11 @@ class CrearcuentaPageState extends State<Crear_cuentaPage> {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Color.fromARGB(255, 126, 126, 126),
-              Color(0xff0A0A0A),
-              Color.fromARGB(255, 0, 0, 0),
-              Color.fromARGB(255, 126, 126, 126),
-
-              // Colors.black,
+              Color.fromARGB(255, 159, 187, 243),
+              Color(0xff154367),
+              Color(0xff154367),
+              Color(0xff154367),
+              Color.fromARGB(255, 159, 187, 243),
             ],
           ),
         ),
@@ -93,11 +92,11 @@ class CrearcuentaPageState extends State<Crear_cuentaPage> {
                 );
               },
               child: Text(
-                'Crear cuenta',
+                'Iniciar Sesión',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.dosis(
                     textStyle: Theme.of(context).textTheme.displayLarge,
-                    fontSize: 20,
+                    fontSize: 18,
                     fontWeight: FontWeight.w600,
                     color: Colors.white),
               ),
@@ -138,18 +137,20 @@ class CrearcuentaPageState extends State<Crear_cuentaPage> {
 
   Widget _buttonSingUp() {
     return MaterialButton(
-        color: const Color.fromARGB(255, 46, 46, 46),
-        onPressed: () {},
+        color: const Color(0xffEDF2FA),
+        onPressed: () {
+          Navigator.pushReplacementNamed(context, 'Login');
+        },
         elevation: 3.0,
         focusElevation: 20,
-        focusColor: const Color(0xff3B3535),
+        focusColor: const Color(0xff333333),
         padding: const EdgeInsets.symmetric(horizontal: 98.0, vertical: 18.0),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-        child: Text('Iniciar sesión',
+        child: Text('Continuar',
             style: GoogleFonts.dosis(
                 textStyle: Theme.of(context).textTheme.displayLarge,
                 fontSize: 20,
-                fontWeight: FontWeight.w800,
-                color: Colors.white)));
+                fontWeight: FontWeight.w700,
+                color: const Color(0xff333333))));
   }
 }

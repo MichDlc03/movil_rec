@@ -109,13 +109,14 @@ class _MiListaDeInmueblesState extends State<MiListaDeInmuebles> {
       ),
       drawer: const CustomDrawer(),
       body: Container(
-            color: const Color(0xffFFFFFF), 
+        color: const Color(0xffFFFFFF),
         child: ListView.builder(
           itemCount: inmueble.length,
           itemBuilder: (context, index) {
             final inmuebles = inmueble[index];
             return Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding:
+                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
               child: Container(
                 decoration: BoxDecoration(
                   color: const Color(0xffEDF2FA),
@@ -131,25 +132,25 @@ class _MiListaDeInmueblesState extends State<MiListaDeInmuebles> {
                 ),
                 child: ListTile(
                   leading: const Icon(Icons.home,
-                      color: Color(0xff000000), size: 40),
+                      color: Color(0xff0B3C5D), size: 40),
                   title: Text(
                     inmuebles.nombreInmueble,
                     style: GoogleFonts.dosis(
                       textStyle: Theme.of(context).textTheme.bodyMedium,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: const Color(0xff333333),
                     ),
                   ),
                   trailing: const Icon(Icons.arrow_circle_right_outlined,
-                      color: Color(0xff000000), size: 30),
+                      color: Color(0xff8f9396), size: 30),
                   subtitle: Text(
                     'Habitaciones: ${inmuebles.cantidadDeHabitaciones}\nMedidas: ${inmuebles.medidasDelTerreno}',
                     style: GoogleFonts.dosis(
                       textStyle: Theme.of(context).textTheme.bodyMedium,
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
-                      color: const Color(0xff000000),
+                      color: const Color(0xff010101),
                     ),
                   ),
                   onTap: () {
