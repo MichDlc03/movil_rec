@@ -120,7 +120,7 @@ class _LoginPageState extends State<LoginPage> {
     return MaterialButton(
         color: const Color(0xffEDF2FA),
         onPressed: () {
-          Navigator.pushReplacementNamed(context, 'ListaDeProspectos');
+          Navigator.pushReplacementNamed(context, 'ListaDeInmuebles');
         },
         elevation: 3.0,
         focusElevation: 20,
