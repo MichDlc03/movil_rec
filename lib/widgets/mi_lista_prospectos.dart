@@ -97,7 +97,7 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
           ),
         ],
         centerTitle: true,
-        backgroundColor: const Color(0xff0A0A0A),
+        backgroundColor: const Color(0xff0B3C5D),
         title: Text(
           title,
           style: GoogleFonts.dosis(
@@ -109,18 +109,7 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
       ),
       drawer: const CustomDrawer(),
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Color.fromARGB(255, 126, 126, 126),
-              Color(0xff0A0A0A),
-              Color.fromARGB(255, 0, 0, 0),
-              Color.fromARGB(255, 126, 126, 126),
-            ],
-          ),
-        ),
+        color: const Color(0xffFFFFFF),
         child: ListView.builder(
           itemCount: prospectos.length,
           itemBuilder: (context, index) {
@@ -129,38 +118,38 @@ class _MiListaDeProspectosState extends State<MiListaDeProspectos> {
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 decoration: BoxDecoration(
-                  color: const Color(0xff3B3535),
+                  color: const Color(0xffEDF2FA),
                   borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black.withOpacity(0.5),
                       spreadRadius: 2,
-                      blurRadius: 5,
+                      blurRadius: 2,
                       offset: const Offset(0, 3),
                     ),
                   ],
                 ),
                 child: ListTile(
                   leading: const Icon(Icons.person,
-                      color: Color(0xffF0F5F9), size: 40),
+                      color: Color(0xff000000), size: 40),
                   title: Text(
                     prospecto.nombre,
                     style: GoogleFonts.dosis(
                       textStyle: Theme.of(context).textTheme.bodyMedium,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   trailing: const Icon(Icons.call,
-                      color: Color(0xffF0F5F9), size: 30),
+                      color: Color.fromARGB(255, 26, 143, 51), size: 30),
                   subtitle: Text(
                     prospecto.descripcion,
                     style: GoogleFonts.dosis(
                       textStyle: Theme.of(context).textTheme.bodyMedium,
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
-                      color: const Color(0xffe1e4e6),
+                      color: const Color(0xff000000),
                     ),
                   ),
                   onTap: () {

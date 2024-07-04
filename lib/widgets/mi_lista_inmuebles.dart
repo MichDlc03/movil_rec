@@ -2,7 +2,7 @@ import 'package:app/pages/perfil_inmuebles_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../models/inmueble_model.dart';
-import 'custom_drawer.dart'; // Asegúrate de importar el widget del drawer
+import 'custom_drawer.dart';
 
 class MiListaDeInmuebles extends StatefulWidget {
   const MiListaDeInmuebles({super.key});
@@ -17,27 +17,52 @@ class _MiListaDeInmueblesState extends State<MiListaDeInmuebles> {
         id: 1,
         nombreInmueble: "Casa de Michelle",
         medidasDelTerreno: "100m2",
-        cantidadDeHabitaciones: 3),
+        cantidadDeHabitaciones: 3,
+        precio: 10000,
+        cantidadDeWC: 2,
+        ubicacion: "Santa Fe, Alvaro Obregón",
+        descripcion:
+            "Renta sin Aval en 24 horas. Proceso ágil y flexible. / Lease without guarantor with agile and flexible processes in 24 hours."),
     Inmueble(
         id: 2,
         nombreInmueble: "Apartamento en el centro",
         medidasDelTerreno: "80m2",
-        cantidadDeHabitaciones: 2),
+        cantidadDeHabitaciones: 2,
+        precio: 10000,
+        cantidadDeWC: 2,
+        ubicacion: "Santa Fe, Alvaro Obregón",
+        descripcion:
+            "Renta sin Aval en 24 horas. Proceso ágil y flexible. / Lease without guarantor with agile and flexible processes in 24 hours."),
     Inmueble(
         id: 3,
         nombreInmueble: "Casa en la playa",
         medidasDelTerreno: "200m2",
-        cantidadDeHabitaciones: 4),
+        cantidadDeHabitaciones: 4,
+        precio: 10000,
+        cantidadDeWC: 2,
+        ubicacion: "Santa Fe, Alvaro Obregón",
+        descripcion:
+            "Renta sin Aval en 24 horas. Proceso ágil y flexible. / Lease without guarantor with agile and flexible processes in 24 hours."),
     Inmueble(
         id: 4,
         nombreInmueble: "Apartamento moderno",
         medidasDelTerreno: "90m2",
-        cantidadDeHabitaciones: 2),
+        cantidadDeHabitaciones: 2,
+        precio: 10000,
+        cantidadDeWC: 2,
+        ubicacion: "Santa Fe, Alvaro Obregón",
+        descripcion:
+            "Renta sin Aval en 24 horas. Proceso ágil y flexible. / Lease without guarantor with agile and flexible processes in 24 hours."),
     Inmueble(
         id: 5,
         nombreInmueble: "Casa familiar",
         medidasDelTerreno: "150m2",
-        cantidadDeHabitaciones: 3),
+        cantidadDeHabitaciones: 3,
+        precio: 10000,
+        cantidadDeWC: 2,
+        ubicacion: "Santa Fe, Alvaro Obregón",
+        descripcion:
+            "Renta sin Aval en 24 horas. Proceso ágil y flexible. / Lease without guarantor with agile and flexible processes in 24 hours."),
   ];
 
   @override
@@ -55,10 +80,12 @@ class _MiListaDeInmueblesState extends State<MiListaDeInmuebles> {
             );
           },
         ),
+        iconTheme: const IconThemeData(color: Colors.white),
+        backgroundColor: const Color(0xff0B3C5D),
         actions: [
           IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.search, color: Colors.white)),
+              onPressed: () {},
+              icon: const Icon(Icons.search, color: Colors.white)),
           Builder(
             builder: (context) {
               return IconButton(
@@ -71,7 +98,6 @@ class _MiListaDeInmueblesState extends State<MiListaDeInmuebles> {
           ),
         ],
         centerTitle: true,
-        backgroundColor: const Color(0xff0A0A0A),
         title: Text(
           title,
           style: GoogleFonts.dosis(
@@ -81,20 +107,9 @@ class _MiListaDeInmueblesState extends State<MiListaDeInmuebles> {
           ),
         ),
       ),
-      drawer: const CustomDrawer(), 
+      drawer: const CustomDrawer(),
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Color.fromARGB(255, 126, 126, 126),
-              Color(0xff0A0A0A),
-              Color.fromARGB(255, 0, 0, 0),
-              Color.fromARGB(255, 126, 126, 126),
-            ],
-          ),
-        ),
+            color: const Color(0xffFFFFFF), 
         child: ListView.builder(
           itemCount: inmueble.length,
           itemBuilder: (context, index) {
@@ -103,38 +118,38 @@ class _MiListaDeInmueblesState extends State<MiListaDeInmuebles> {
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 decoration: BoxDecoration(
-                  color: const Color(0xff3B3535),
+                  color: const Color(0xffEDF2FA),
                   borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.5),
+                      color: Colors.black.withOpacity(0.2),
                       spreadRadius: 2,
-                      blurRadius: 5,
+                      blurRadius: 2,
                       offset: const Offset(0, 3),
                     ),
                   ],
                 ),
                 child: ListTile(
                   leading: const Icon(Icons.home,
-                      color: Color(0xffF0F5F9), size: 40),
+                      color: Color(0xff000000), size: 40),
                   title: Text(
                     inmuebles.nombreInmueble,
                     style: GoogleFonts.dosis(
                       textStyle: Theme.of(context).textTheme.bodyMedium,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   trailing: const Icon(Icons.arrow_circle_right_outlined,
-                      color: Color(0xffF0F5F9), size: 30),
+                      color: Color(0xff000000), size: 30),
                   subtitle: Text(
                     'Habitaciones: ${inmuebles.cantidadDeHabitaciones}\nMedidas: ${inmuebles.medidasDelTerreno}',
                     style: GoogleFonts.dosis(
                       textStyle: Theme.of(context).textTheme.bodyMedium,
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
-                      color: const Color(0xffe1e4e6),
+                      color: const Color(0xff000000),
                     ),
                   ),
                   onTap: () {

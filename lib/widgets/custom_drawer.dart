@@ -11,7 +11,7 @@ class CustomDrawer extends StatelessWidget {
         children: <Widget>[
           const DrawerHeader(
             decoration: BoxDecoration(
-              color: Color(0xff0A0A0A),
+              color:  Color(0xff0B3C5D),
             ),
             child: Text(
               'Menú',
@@ -22,7 +22,7 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: const Icon(Icons.home),
+            leading: const Icon(Icons.home, color: Color(0xff0B3C5D),),
             title: const Text('Inmuebles'),
             onTap: () {
               Navigator.pop(context);  
@@ -30,7 +30,7 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.person),
+            leading: const Icon(Icons.person, color: Color(0xff0B3C5D),),
             title: const Text('Asesores'),
             onTap: () {
               Navigator.pop(context); 

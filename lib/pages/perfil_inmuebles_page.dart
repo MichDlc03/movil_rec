@@ -11,7 +11,7 @@ class MiPerfilInmueblesPage extends StatelessWidget {
     'assets/imagenes/casa3.jpg',
   ];
 
-MiPerfilInmueblesPage({required this.inmueble, super.key});
+  MiPerfilInmueblesPage({required this.inmueble, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,21 +26,10 @@ MiPerfilInmueblesPage({required this.inmueble, super.key});
           ),
         ),
         iconTheme: const IconThemeData(color: Colors.white),
-        backgroundColor: const Color(0xff0A0A0A),
+        backgroundColor: const Color(0xff0B3C5D),
       ),
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Color.fromARGB(255, 126, 126, 126),
-              Color(0xff0A0A0A),
-              Color.fromARGB(255, 0, 0, 0),
-              Color.fromARGB(255, 126, 126, 126),
-            ],
-          ),
-        ),
+        color: const Color(0xffEDF2FA), 
         child: ListView(
           padding: const EdgeInsets.all(16.0),
           children: [
@@ -80,18 +69,18 @@ MiPerfilInmueblesPage({required this.inmueble, super.key});
                 textStyle: Theme.of(context).textTheme.headlineMedium,
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: Colors.black, 
               ),
             ),
             const SizedBox(height: 16),
             ListTile(
-              leading: const Icon(Icons.square_foot, color: Colors.white),
+              leading: const Icon(Icons.square_foot, color: Color(0xff0B3C5D)),
               title: Text(
                 'Medidas del terreno:',
                 style: GoogleFonts.dosis(
                   textStyle: Theme.of(context).textTheme.bodyMedium,
                   fontSize: 16,
-                  color: Colors.white70,
+                  color: Colors.black, 
                 ),
               ),
               subtitle: Text(
@@ -99,18 +88,18 @@ MiPerfilInmueblesPage({required this.inmueble, super.key});
                 style: GoogleFonts.dosis(
                   textStyle: Theme.of(context).textTheme.bodyMedium,
                   fontSize: 14,
-                  color: Colors.white,
+                  color: Colors.black, 
                 ),
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.bed, color: Colors.white),
+              leading: const Icon(Icons.bed, color: Color(0xff0B3C5D)),
               title: Text(
                 'Cantidad de habitaciones:',
                 style: GoogleFonts.dosis(
                   textStyle: Theme.of(context).textTheme.bodyMedium,
                   fontSize: 16,
-                  color: Colors.white70,
+                  color: Colors.black, 
                 ),
               ),
               subtitle: Text(
@@ -118,7 +107,83 @@ MiPerfilInmueblesPage({required this.inmueble, super.key});
                 style: GoogleFonts.dosis(
                   textStyle: Theme.of(context).textTheme.bodyMedium,
                   fontSize: 14,
-                  color: Colors.white,
+                  color: Colors.black, 
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.wc, color: Color(0xff0B3C5D)),
+              title: Text(
+                'Cantidad de baños:',
+                style: GoogleFonts.dosis(
+                  textStyle: Theme.of(context).textTheme.bodyMedium,
+                  fontSize: 16,
+                  color: Colors.black, 
+                ),
+              ),
+              subtitle: Text(
+                inmueble.cantidadDeWC.toString(),
+                style: GoogleFonts.dosis(
+                  textStyle: Theme.of(context).textTheme.bodyMedium,
+                  fontSize: 14,
+                  color: Colors.black, 
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.attach_money, color: Color(0xff0B3C5D)),
+              title: Text(
+                'Precio:',
+                style: GoogleFonts.dosis(
+                  textStyle: Theme.of(context).textTheme.bodyMedium,
+                  fontSize: 16,
+                  color: Colors.black, 
+                ),
+              ),
+              subtitle: Text(
+                inmueble.precio.toString(),
+                style: GoogleFonts.dosis(
+                  textStyle: Theme.of(context).textTheme.bodyMedium,
+                  fontSize: 14,
+                  color: Colors.black, 
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.location_city, color: Color(0xff0B3C5D)),
+              title: Text(
+                'Ubicación:',
+                style: GoogleFonts.dosis(
+                  textStyle: Theme.of(context).textTheme.bodyMedium,
+                  fontSize: 16,
+                  color: Colors.black, 
+                ),
+              ),
+              subtitle: Text(
+                inmueble.ubicacion.toString(),
+                style: GoogleFonts.dosis(
+                  textStyle: Theme.of(context).textTheme.bodyMedium,
+                  fontSize: 14,
+                  color: Colors.black, 
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.description, color: Color(0xff0B3C5D)),
+              title: Text(
+                'Descripción:',
+                style: GoogleFonts.dosis(
+                  textStyle: Theme.of(context).textTheme.bodyMedium,
+                  fontSize: 16,
+                  color: Colors.black, 
+                ),
+              ),
+              subtitle: Text(
+                inmueble.descripcion.toString(),
+                style: GoogleFonts.dosis(
+                  textStyle: Theme.of(context).textTheme.bodyMedium,
+                  fontSize: 14,
+                  color: Colors.black, 
                 ),
               ),
             ),

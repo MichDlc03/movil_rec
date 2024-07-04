@@ -20,21 +20,10 @@ class MiPerfilProspectoPage extends StatelessWidget {
           ),
         ),
         iconTheme: const IconThemeData(color: Colors.white),
-        backgroundColor: const Color(0xff0A0A0A),
+        backgroundColor: const Color(0xff0B3C5D),
       ),
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Color.fromARGB(255, 126, 126, 126),
-              Color(0xff0A0A0A),
-              Color.fromARGB(255, 0, 0, 0),
-              Color.fromARGB(255, 126, 126, 126),
-            ],
-          ),
-        ),
+        color: const Color(0xffFFFFFF),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -44,11 +33,11 @@ class MiPerfilProspectoPage extends StatelessWidget {
                 children: [
                   const CircleAvatar(
                     radius: 40,
-                    backgroundColor: Color(0xff3B3535),
+                    backgroundColor: Color(0xffEDF2FA),
                     child: Icon(
                       Icons.person,
                       size: 40,
-                      color: Color(0xffe1e4e6),
+                      color: Color(0xff000000),
                     ),
                   ),
                   const SizedBox(width: 16),
@@ -61,7 +50,7 @@ class MiPerfilProspectoPage extends StatelessWidget {
                           textStyle: Theme.of(context).textTheme.headlineMedium,
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                          color: Colors.black,
                         ),
                       ),
                       const SizedBox(height: 8),
@@ -70,7 +59,7 @@ class MiPerfilProspectoPage extends StatelessWidget {
                         style: GoogleFonts.dosis(
                           textStyle: Theme.of(context).textTheme.bodyMedium,
                           fontSize: 16,
-                          color: Colors.white70,
+                          color: Colors.black,
                         ),
                       ),
                     ],
@@ -84,7 +73,7 @@ class MiPerfilProspectoPage extends StatelessWidget {
                   textStyle: Theme.of(context).textTheme.headlineMedium,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               const SizedBox(height: 8),
@@ -97,13 +86,13 @@ class MiPerfilProspectoPage extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15),
                       ),
-                      color: const Color(0xff3B3535),
+                      color: const Color(0xffEDF2FA),
                       elevation: 5,
                       margin: const EdgeInsets.symmetric(vertical: 8),
                       child: ListTile(
                         leading: const Icon(
                           Icons.home,
-                          color: Color(0xffe1e4e6),
+                          color: Color(0xff0B3C5D),
                           size: 40,
                         ),
                         title: Text(
@@ -112,7 +101,7 @@ class MiPerfilProspectoPage extends StatelessWidget {
                             textStyle: Theme.of(context).textTheme.bodyMedium,
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white,
+                            color: Colors.black,
                           ),
                         ),
                         subtitle: Text(
@@ -120,7 +109,7 @@ class MiPerfilProspectoPage extends StatelessWidget {
                           style: GoogleFonts.dosis(
                             textStyle: Theme.of(context).textTheme.bodyMedium,
                             fontSize: 14,
-                            color: Colors.white70,
+                            color: Colors.black,
                           ),
                         ),
                       ),
